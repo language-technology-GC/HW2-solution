@@ -8,13 +8,13 @@
 import argparse
 import re
 
-from typing import Iterable, List, Optional, Tuple
+from typing import Iterable, List, Tuple
 
 # fairseq-generate parsing.
 
 
 LOG_STATEMENT = r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} | INFO"
-FINAL_STATEMENT = "Generate (\w)+ with"
+FINAL_STATEMENT = r"Generate (\w)+ with"
 
 
 Sequence = List[str]
