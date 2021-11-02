@@ -53,7 +53,7 @@ def _output(path: str) -> Iterable[Tuple[Sequence, Sequence, Sequence, float]]:
             hypothesis = hypothesis_str.split()
             # TODO: I think there can be multiple hypotheses per S/T pair, but
             # this is not yet supported.
-            yield (source, target, hypothesis, score)
+            yield source, target, hypothesis, score
             # Skips over the next two.
             line = next(generate)
             assert line.startswith("D-"), line
