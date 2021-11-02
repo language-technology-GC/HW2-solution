@@ -40,15 +40,15 @@ def _output(path: str) -> Iterable[Tuple[Sequence, Sequence, Sequence, float]]:
             # P: positional scores per token.
             # We extract S, T, H, and H's score.
             assert line.startswith("S-"), line
-            (_, source_str) = line.split("\t", 1)
+            _, source_str = line.split("\t", 1)
             source = source_str.split()
             line = next(generate)
             assert line.startswith("T-"), line
-            (_, target_str) = line.split("\t", 1)
+            _, target_str = line.split("\t", 1)
             target = target_str.split()
             line = next(generate)
             assert line.startswith("H-"), line
-            (_, score_str, hypothesis_str) = line.split("\t", 2)
+            _, score_str, hypothesis_str = line.split("\t", 2)
             score = float(score_str)
             hypothesis = hypothesis_str.split()
             # TODO: I think there can be multiple hypotheses per S/T pair, but
