@@ -2,9 +2,6 @@
 """Error analysis on fairseq-generate output."""
 
 
-# TODO(kbg): Expand to handle other types of yer patterns.
-
-
 import argparse
 import re
 
